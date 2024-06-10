@@ -11,20 +11,19 @@ import {
   Dropdown,
   DropdownMenu,
   Avatar,
-  Button,
 } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import { SearchIcon } from "./SearchIcon.jsx";
 
 export default function Header() {
   return (
-    <Navbar isBordered>
-      <NavbarContent justify="start" className="pl-4">
-        <NavbarBrand className="flex items-center mr-4">
+    <Navbar isBordered maxWidth="xl">
+      <NavbarContent justify="start">
+        <NavbarBrand className="mr-4">
           <AcmeLogo />
-          <p className="hidden sm:block font-bold text-inherit ml-2">ACME</p>
+          <p className="hidden sm:block font-bold text-inherit">ACME</p>
         </NavbarBrand>
-        <NavbarContent className="hidden md:flex gap-3">
+        <NavbarContent className="hidden sm:flex gap-3">
           <NavbarItem>
             <Link color="foreground" href="#">
               Features
@@ -43,7 +42,7 @@ export default function Header() {
         </NavbarContent>
       </NavbarContent>
 
-      <NavbarContent as="div" className="flex items-center justify-end pr-4 gap-4">
+      <NavbarContent as="div" className="items-center" justify="end">
         <Input
           classNames={{
             base: "max-w-full sm:max-w-[10rem] h-10",
@@ -57,7 +56,6 @@ export default function Header() {
           startContent={<SearchIcon size={18} />}
           type="search"
         />
-        
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar
@@ -68,7 +66,6 @@ export default function Header() {
               name="Jason Hughes"
               size="sm"
               src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-              style={{ borderRadius: "50%" }} // Ensuring the image is circular
             />
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
