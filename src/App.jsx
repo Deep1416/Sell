@@ -1,13 +1,14 @@
 import "./App.css";
-import { Footer, Header } from "./components";
-import Demo from "./components/demo/Demo";
+import { Banner, Footer, Header } from "./components";
+
 function App() {
   return (
     <>
       <div>
         <Header />
         <Footer />
-        {/* <Demo/> */}
+        {/* <Banner/> */}
+    
       </div>
     </>
   );
